@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .sqlplugin import CustDet, EmailLog
+
 from .sqlPluginDev import Dashi2, Donation
 #from .live import Dashi2
 # Create your views here.
