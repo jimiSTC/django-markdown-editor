@@ -3,3 +3,6 @@ Markdown
 requests
 martor
 gunicorn
+pyodbc
+os
+dotenv
