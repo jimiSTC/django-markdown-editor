@@ -143,3 +143,29 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'martor_static')
 MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'martor_media')
+
+#Cache settings
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+#Cache time to live is 60 seconds. 
+CACHE_TTL = 10
+
+# settings.py
+from dotenv import load_dotenv
+load_dotenv()
+
+# OR, the same with increased verbosity
+load_dotenv(verbose=True)
+
+# OR, explicitly providing path to '.env'
+from pathlib import Path  # Python 3.6+ only
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
