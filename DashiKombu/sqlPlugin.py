@@ -17,7 +17,8 @@ load_dotenv(dotenv_path=env_path)
 # server = 'myserver,port' # to specify an alternate port
 server = 'tcp:stc-tess-db1' 
 database = 'impresario' 
-
+username = os.getenv("pyusername")
+password = os.getenv("pyuser_db_pass")
 
 
 #customer_no = '1119449'
