@@ -5,3 +5,4 @@ martor
 gunicorn
 pyodbc
 dotenv
+django_redis
