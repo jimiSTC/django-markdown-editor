@@ -4,5 +4,6 @@ requests
 martor
 gunicorn
 pyodbc
-dotenv
+python-dotenv
 django_redis
+tabulate
